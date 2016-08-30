@@ -1,0 +1,25 @@
+{
+  "name": "zblog",
+  "version": "0.0.1",
+  "description": "It is a static blog stystem based on markdown and nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuojj/zblog.git"
+  },
+  "keywords": [
+    "zblog"
+  ],
+  "author": "benjamin (zuojj)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuojj/zblog/issues"
+  },
+  "homepage": "https://github.com/zuojj/zblog#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
