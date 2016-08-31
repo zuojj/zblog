@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "It is a static blog stystem based on markdown and nodejs",
   "main": "index.js",
+  "bin": {
+    "zblog": "./bin/zblog"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +23,8 @@
   },
   "homepage": "https://github.com/zuojj/zblog#readme",
   "dependencies": {
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "express": "^4.14.0",
+    "serve-static": "^1.11.1"
   }
 }

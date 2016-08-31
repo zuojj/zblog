@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var program = require('commander');
+let preview = require('../lib/preview');
 
 program.version('0.0.1');
 
@@ -24,9 +25,7 @@ program
 program
     .command('preview [dir]')
     .description('实时预览')
-    .action((dir) => {
-        console.log('preview %s', dir);
-    });
+    .action(preview);
 
 // build
 program
