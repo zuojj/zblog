@@ -1,7 +1,10 @@
 ---
-    title: First file md
+    title: First Article
+    date: 2016-09-01
     author: benjamin
 ---
 
 
-# Hello World
+# The first article
+
+# How are you
