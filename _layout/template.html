@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>{{ config.title }}</title>
+<title><%= post.title %></title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
@@ -12,13 +12,13 @@
 
 <div id="page">
     <header id="header">
-        {{ post.title }}-{{ post.date }}-{{ post.author }}
+        <%= post.title %>-<%= post.date %>-<%= post.author %>
     </header>
     <div id="body">
-        {{ post.body }}
+        <%- post.body %>
     </div>
     <footer id="footer">
-        {{ config.copyright }}
+        <%= post.copyright %>
     </footer>
 </div>
 

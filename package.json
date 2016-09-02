@@ -24,9 +24,9 @@
   "homepage": "https://github.com/zuojj/zblog#readme",
   "dependencies": {
     "commander": "^2.9.0",
+    "ejs": "^2.5.1",
     "express": "^4.14.0",
     "markdown-it": "^7.0.1",
-    "serve-static": "^1.11.1",
-    "swig": "^1.4.2"
+    "serve-static": "^1.11.1"
   }
 }
