@@ -3,6 +3,7 @@
 let program = require('commander');
 let preview = require('../lib/preview');
 let build   = require('../lib/build');
+let create  = require('../lib/create');
 
 program.version('0.0.1');
 
@@ -14,17 +15,15 @@ program
         program.outputHelp();
     });
 
-// cteate
+// init blog
 program
-    .command('create [dir]')
-    .description('创建一个空的博客')
-    .action((dir) => {
-        console.log('create %s', dir);
-    });
+    .command('init [dir]')
+    .description('创建一个新的博客')
+    .action(create);
 
-// preview
+// server
 program
-    .command('preview [dir]')
+    .command('server [dir]')
     .description('实时预览')
     .action(preview);
 

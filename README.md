@@ -1,3 +1,12 @@
 # zblog
 It is a tatic blog system based on markdown and nodejs
-es6 + koa2 + vuejs + sass
+
+# operate
+
+```
+$ npm install -g zblog
+$ zblog init newblog
+$ cd newblog
+$ zblog build
+$ zblog server
+```
