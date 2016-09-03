@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-var program = require('commander');
+let program = require('commander');
 let preview = require('../lib/preview');
+let build   = require('../lib/build');
 
 program.version('0.0.1');
 
@@ -32,9 +33,7 @@ program
     .command('build [dir]')
     .description('生成静态HTML')
     .option('-o, --output <dir>', '生成静态HTML存放目录')
-    .action((dir, options) => {
-        console.log('create %s, output %s', dir, output);
-    });
+    .action(build);
 
 // 解析命令
 program.parse(process.argv);

@@ -26,6 +26,7 @@
     "commander": "^2.9.0",
     "ejs": "^2.5.1",
     "express": "^4.14.0",
+    "fs-extra": "^0.30.0",
     "markdown-it": "^7.0.1",
     "rd": "0.0.2",
     "serve-static": "^1.11.1"
