@@ -1,4 +1,6 @@
 {
     "port": 8080,
-    "title": "zblog: a static blog"
+    "title": "zblog: a static blog",
+    "keywords": "zblog,blog",
+    "description": "zblog,blog"
 }
