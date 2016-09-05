@@ -19,6 +19,7 @@ commander
 commander
     .command('init [dir]')
     .description('创建一个新的博客')
+    .option('-t, --theme <theme>', '当前主题名称')
     .action(create);
 
 // server
