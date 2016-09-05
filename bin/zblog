@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-let program = require('commander');
-let preview = require('../lib/preview');
-let build   = require('../lib/build');
-let create  = require('../lib/create');
+const program = require('commander');
+const preview = require('../lib/preview');
+const build   = require('../lib/build');
+const create  = require('../lib/create');
 
 program.version('0.0.1');
 
