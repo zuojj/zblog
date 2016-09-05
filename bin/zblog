@@ -1,38 +1,38 @@
 #!/usr/bin/env node
 
-const program = require('commander');
-const preview = require('../lib/preview');
-const build   = require('../lib/build');
-const create  = require('../lib/create');
+const commander = require('commander');
+const preview   = require('../lib/preview');
+const build     = require('../lib/build');
+const create    = require('../lib/create');
 
-program.version('0.0.1');
+commander.version('0.0.1');
 
 // help
-program
+commander
     .command('help')
     .description('显示使用帮助')
     .action(() => {
-        program.outputHelp();
+        commander.outputHelp();
     });
 
 // init blog
-program
+commander
     .command('init [dir]')
     .description('创建一个新的博客')
     .action(create);
 
 // server
-program
+commander
     .command('server [dir]')
     .description('实时预览')
     .action(preview);
 
 // build
-program
+commander
     .command('build [dir]')
     .description('生成静态HTML')
     .option('-o, --output <dir>', '生成静态HTML存放目录')
     .action(build);
 
 // 解析命令
-program.parse(process.argv);
+commander.parse(process.argv);
