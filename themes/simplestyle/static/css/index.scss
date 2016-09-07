@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-07 18:06:35
+ * @version $Id$
+ */
+
+
+.div {
+    color: #fff;
+    a {
+        color: #f00;
+    }
+
+    &.b{
+        background-color: #f00;
+    }
+}

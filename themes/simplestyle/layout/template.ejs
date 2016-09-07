@@ -1,0 +1,15 @@
+<%- include("head") %>
+<%- include("header") %>
+<div id="article">
+    <header class="article-header">
+        <%= post.title %>-<%= post.date %>-<%= post.author %>
+    </header>
+    <section class="article-body">
+        <%- post.body %>
+    </section>
+    <footer class="article-footer">
+        文章结尾
+    </footer>
+</div>
+<%- include("footer") %>
+<%- include("foot") %>

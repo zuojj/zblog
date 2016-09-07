@@ -1,6 +1,6 @@
-<%- include ../_include/head.html %>
-<%- include ../_include/header.html %>
-<div id="page">
+<%- include("head") %>
+<%- include("header") %>
+<div id="article">
     <ul>
         <% lists.forEach(function(item, index){ %>
         <li>
@@ -10,5 +10,5 @@
         <% }) %>
     </ul>
 </div>
-<%- include ../_include/footer.html %>
-<%- include ../_include/foot.html %>
+<%- include("footer") %>
+<%- include("foot") %>
