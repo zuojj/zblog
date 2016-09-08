@@ -1,8 +1,9 @@
 <%- include("head") %>
 <%- include("header") %>
-<div id="article">
+<div id="article" class="article">
     <header class="article-header">
-        <%= post.title %>-<%= post.date %>-<%= post.author %>
+        <h1><%= post.title %></h1>
+        <h4><%= post.date %>-<%= post.author %></h4>
     </header>
     <section class="article-body">
         <%- post.body %>

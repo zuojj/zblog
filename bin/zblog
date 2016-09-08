@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
 const commander = require('commander');
-const preview   = require('../lib/preview');
+const fs = require('fs');
+const server    = require('../lib/server');
 const build     = require('../lib/build');
-const create    = require('../lib/create');
+const init      = require('../lib/init');
+const newpost   = require('../lib/newpost');
 
 commander.version('0.0.1');
 
@@ -20,13 +22,13 @@ commander
     .command('init [dir]')
     .description('创建一个新的博客')
     .option('-t, --theme <theme>', '当前主题名称')
-    .action(create);
+    .action(init);
 
 // server
 commander
     .command('server [dir]')
     .description('实时预览')
-    .action(preview);
+    .action(server);
 
 // build
 commander
@@ -35,5 +37,12 @@ commander
     .option('-o, --output <dir>', '生成静态HTML存放目录')
     .action(build);
 
+commander
+    .command('new [articleName]')
+    .description('新建一篇文章')
+    .option('-o, --output <dir>', '新建markdown存放目录')
+    .action(newpost);
+
 // 解析命令
 commander.parse(process.argv);
+
