@@ -9,45 +9,4 @@
 @import "./reset";
 
 
-#header,
-#footer {
-    height: 30px;
-    line-height: 30px;
-    background-color: #efefef;
-}
-
-.article {
-    width: 1000px;
-    margin: 0 auto;
-    min-height: 400px;
-
-    &-header {
-        h1 {
-            text-align: center;
-        }
-
-        h4 {
-            color: #333;
-        }
-    }
-
-    &-body {
-        min-height: 400px;
-    }
-
-    &-footer {
-        height: 40px;
-        line-height: 40px;
-        background-color: #ddd;
-    }
-}
-
-
-
-
-.index-ulist {
-    li {
-        line-height: 30px;
-        border-bottom: 1px solid #ddd;
-    }
-}
+@import './index';
