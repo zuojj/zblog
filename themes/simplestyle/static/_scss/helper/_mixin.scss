@@ -37,14 +37,3 @@
 %ellipsis {
     @include ellipsis();
 }
-
-@mixin mask($zIndex: 202, $backgroundColor: #000, $opacity: .6) {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 1000%;
-  height: 1000%;
-  background-color: $backgroundColor;
-  opacity: $opacity;
-  z-index: $zIndex;
-}

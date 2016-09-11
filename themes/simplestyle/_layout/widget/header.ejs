@@ -1,1 +1,34 @@
-<header id="header">header</header>
+<%
+    config = {
+        project: 'WEBX'
+    }
+%>
+
+<header class="simple-header"> 
+    <a class="simple-header-logo" href="/" alt="<%= config.project %>">
+        <img src="/static/img/demo/logo.png" alt="<%= config.project %>" />
+    </a>
+    <nav class="simple-header-nav">
+        <ul class="simple-header-nav-list">
+            <li class="simple-header-nav-item active"> 
+                <a href="#">Home</a>
+            </li>
+            <li class="simple-header-nav-item">
+                <a href="#">Categories</a>
+            </li>
+            <li class="simple-header-nav-item">
+                <a href="#">Tags</a>
+            </li>
+            <li class="simple-header-nav-item">
+                <a href="#">Archives</a>
+            </li>
+            <li class="simple-header-nav-item">
+                <a href="#">Search</a>
+            </li>
+            <li class="simple-header-nav-item">
+                <a href="#">About</a>
+            </li>
+        </ul>
+    </nav>
+    <i class="simple-icon-dir"></i>
+</header>

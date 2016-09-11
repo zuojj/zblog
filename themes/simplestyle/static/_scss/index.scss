@@ -7,186 +7,55 @@
  */
 
 
-@import './helper/_css3';
+@import './helper/_mixin';
 
-#zblog {
-    padding-bottom: 40px;
+
+
+.simple-post-list {
+    margin-left: -24px;
 }
+.simple-post-item {
+    float: left;
+    width: 280px;
+    margin: 0 0 40px 24px;
+    border: 2px solid #f8f8f8;
+    background-color: #fff;
 
-
-/* Header */
-.zblog-header {
-    padding: 0 20px;
-
-    border-bottom: 1px solid #eef2f8;
-
-    @include display-flex();
-    @include box-sizing(border-box);
-    .icon-dir {
-        width: 20px;
-        height: 20px;
-
-        border-radius: 50%;
-        background-color: #ebc;
-    }
-    .title {
-        font-size: 1.6rem;
-        line-height: 54px;
-
-        text-align: center;
-
-        @include flex(1);
-        &-link {
-            display: block;
-
-            color: #88909a;
-            &:hover,
-            &:active {
-                text-decoration: none;
-
-                color: #6e7681;
+    &:hover {
+        border-color: orange;
+        .simple-post-item-info {
+            .title {
+                color: orange;
             }
         }
     }
-    .user {
-        width: 20px;
-        height: 20px;
 
-        border-radius: 50%;
-        img {
+    >a {
+        display: block;
+    }
+
+    &-thumb {
+        height: 150px;
+        overflow: hidden;
+        >img {
             width: 100%;
         }
     }
-}
 
-.zblog-body {
-    background: url(/static/img/demo/city.jpg) no-repeat center center/100% 100%;
+    &-info {
+        padding: 10px;
+        .title {
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            @extend %ellipsis;
+        }
 
-    @include display-flex();
-}
-
-/* Nav */
-.zblog-nav {
-    width: 540px;
-    &-profile {
-        text-align: center;
-        img {
-            width: 80px;
-            height: 80px;
-
-            border-radius: 50%;
+        .meta {
+            font-size: 10px;
+            color: #999;
         }
     }
-    &-list {
-        width: 320px;
-        margin: 40px auto 0;
-    }
-    &-item {
-        line-height: 30px;
-
-        width: 100%;
-        height: 30px;
-
-        color: #fff;
-    }
-}
-
-/* Main */
-.zblog-main {
-    padding: 40px 0;
-
-    background-color: #fff;
-
-    @include flex(1);
-}
-
-.zblog-post {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 0 20px;
-    &-item {
-        padding: 20px 0 8px;
-
-        border-bottom: 1px solid #eef2f8;
-
-        @include display-flex();
-        &:last-child {
-            border-color: #fff;
-        }
-        &-thumb {
-            width: 140px;
-            height: 140px;
-            padding-right: 15px;
-        }
-        &-detail {
-            @include flex(1);
-            .title {
-                line-height: 1;
-                .title-link {
-                    font-size: 1.5rem;
-
-                    display: block;
-
-                    color: #333;
-                }
-            }
-            .meta {
-                color: #9eabb3;
-                .category-link {
-                    font-size: 12px;
-
-                    color: #9eabb3;
-                }
-            }
-            .excerpt {
-                font-size: 14px;
-                line-height: 24px;
-
-                overflow: hidden;
-
-                height: 48px;
-                margin: 10px 0 5px 0;
-
-                color: #5d686f;
-            }
-            .readmore {
-                font-size: 12px;
-                .more-link {
-                    color: #349ef3;
-                }
-            }
-        }
-    }
-}
-
-
-
-
-
-
-/* footer */
-.zblog-footer {
-    line-height: 40px;
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-
-    text-align: center;
-
-    color: #9eabb3;
-    border-top: 1px solid #eef2f8;
-    background-color: #fff;
-}
-
-/* Icon */
-
-.icon {
-    width: 20px;
-    height: 20px;
-
-    border-radius: 50%;
-    background-color: #ebc;
 }

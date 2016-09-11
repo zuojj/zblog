@@ -2,5 +2,23 @@
     "title": "zblog: a static blog",
     "keywords": "zblog,blog",
     "description": "zblog,blog",
-    "port": 8080
+    "port": 8080,
+    "links": [
+        {
+            "title": "搜狗搜索",
+            "url": "https://m.sogou.com"
+        }, {
+            "title": "搜狗音乐",
+            "url": "https://m.sogou.com"
+        }, {
+            "title": "搜狗小说",
+            "url": "https://m.sogou.com"
+        }, {
+            "title": "搜狗图片",
+            "url": "https://m.sogou.com"
+        }, {
+            "title": "搜狗地图",
+            "url": "https://m.sogou.com"
+        }
+    ]
 }

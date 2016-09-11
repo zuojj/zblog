@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-11 14:09:57
+ * @version $Id$
+ */
+
+
+.simple-article {
+    padding: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+    &-info {
+        .title {
+            font-size: 26px;
+            color: #333333;
+            line-height: 40px;
+            margin: 5px 0;
+            padding: 0;
+            font-family: Palatino, "Palatino Linotype", 'OFL Sorts Mill Goudy', 'OFL Sorts Mill Goudy TT', Georgia, serif;
+        }
+
+        .meta {
+            color: #999;
+            font-size: 12px;
+        }
+    }
+
+    &-content {
+        padding-top: 20px;
+        font-size: 14px;
+        line-height: 22px;
+
+        h1, h2, h3, h4, h5, h6 {
+            padding-left: 20px;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+            box-shadow: inset 4px 0 0 #7fcb5c;
+        }
+
+        h1  {
+            padding-bottom: 0.3em;
+            font-size: 2em;
+        }
+
+        h2 {
+            padding-bottom: 0.3em;
+            font-size: 1.5em;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 1.25em;
+        }
+
+        h4 {
+            font-size: 1em;
+        }
+
+        h5 {
+            font-size: 0.875em;
+        }
+
+        h6 {
+            font-size: 0.6em;
+        }
+
+        p {
+            line-height: 22px;
+            margin: 15px 0;
+            color: #333333;
+        }
+
+        img {
+            border: 1px solid #bababa;
+            box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+            max-width: 840px;
+        }
+
+        table {
+            cell-spacing: 0;
+            border: 1px solid #dadada;
+            margin: 20px 0;
+            width: 100%;
+            th, td {
+                padding: 6px 10px;
+                border-bottom: 1px solid #eaeaea;
+                border-right: 1px solid #dadada;
+                color: #333;
+                line-height: 18px;
+            }
+            &.border-less {
+                th, td {
+                    border-right: none;
+                    border-left: none;
+                }
+            }
+            th {
+                font-size: 16px;
+                line-height: 28px;
+                font-weight: bold;
+                color: #333;
+            }
+            tbody tr:nth-child(even) {
+                background: #fafafa;
+            }
+        }
+
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 1.5em 0;
+            padding: 0.5em 10px;
+            position: relative;
+            quotes: "\201C" "\201D" "\2018" "\2019";
+
+            &:before {
+                color: #ccc;
+                content: open-quote;
+                font-size: 3em;
+                position: absolute;
+                top: 10px;
+            }
+
+            p {
+                text-indent: 1.5em;
+                margin: 0 !important;
+            }
+        }
+
+        p, h1, h2, h3, h4, h5, a {
+            font-family: Museo, Segoe, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        a {
+            &:link, &:visited, &:link:hover, &:visited:hover {
+                color: #ea3e0a;
+                margin: 0 2px;
+                overflow-wrap: break-word;
+            }
+            &:hover {
+                color: #ea3e0a;
+                margin: 0 2px;
+                text-decoration: underline;
+            }
+        }
+    }
+}

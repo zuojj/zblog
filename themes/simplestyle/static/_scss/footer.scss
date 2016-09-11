@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-11 11:30:16
+ * @version $Id$
+ */
+
+/* footer */
+.simple-footer {
+    line-height: 40px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #9eabb3;
+    border-top: 1px solid #eef2f8;
+    background-color: #fff;
+}

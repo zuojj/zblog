@@ -1,214 +1,27 @@
 <%- include("head") %>
+<%- include("banner") %>
 
-<div id="zblog">
-    <header class="zblog-header"> 
-        <i class="icon icon-dir"></i>
-        <div class="title">
-            <a class="title-link" href="#">Zblog theme demo</a>
-        </div>
-        <div class="user">
-            <img src="/static/img/user.jpeg"/>
-        </div>
-    </header>
-
-    <div class="zblog-body">
-        <!-- Nav S -->
-        <nav class="zblog-nav">
-            <div class="zblog-nav-profile">
-                <img src="bb.png"/>
-            </div>
-            <ul class="zblog-nav-list">
-                <li class="zblog-nav-item"> 
-                    <i class="icon-*"></i>
-                    <span>Home</span>
-                </li>
-                <li class="zblog-nav-item">
-                    <i class="icon-*"></i>
-                    <span>Categories</span>
-                </li>
-                <li class="zblog-nav-item">
-                    <i class="icon-*"></i>
-                    <span>Tags</span>
-                </li>
-                <li class="zblog-nav-item">
-                    <i class="icon-*"></i>
-                    <span>Archives</span>
-                </li>
-                <li class="zblog-nav-item">
-                    <i class="icon-*"></i>
-                    <span>Search</span>
-                </li>
-                <li class="zblog-nav-item">
-                    <i class="icon-*"></i>
-                    <span>About</span>
-                </li>
-                <li class="zblog-nav-item">
-                    <i class="icon-*"></i>
-                    <span>Github</span>
-                </li>
-                <li class="zblog-nav-item">
-                    <i class="icon-*"></i>
-                    <span>RSS</span>
-                </li>
-            </ul>
-        </nav>
-        <!-- Nav E -->
-
-        <!-- Main S -->
-        <div class="zblog-main">
-            <section class="zblog-post">
-                <article class="zblog-post-item">
-                    <a href="#" class="zblog-post-item-thumb">
-                        <img src="/static/img/demo/city-01.jpg"/>
+<div class="simple-body">
+    <div class="simple-body-main">
+        <section class="simple-post-list">
+            <% pages && pages.forEach(function(page, index) { %>
+                <article class="simple-post-item">
+                    <a href="<%= page.url %>" title="<%= page.title %>">
+                        <div class="simple-post-item-thumb">
+                            <img src="/static/img/demo/<%= page.imgsrc %>" alt="<%= page.title %>" />
+                        </div>
+                        <div class="simple-post-item-info">
+                            <h3 class="title"><%= page.title %></h3>
+                            <div class="meta">
+                                <span><%= page.author %> 发布于</span>
+                                <time><%= page.date %></time>
+                            </div>
+                        </div>
                     </a>
-                    <section class="zblog-post-item-detail">
-                        <h1 class="title">
-                            <a href="#" class="title-link">如何用 fis3 来开发 React?</a>
-                        </h1>
-                        <div class="meta">
-                            <time datetime="2015-05-28T22:30:05+02:00">May 28, 2015</time>
-                            <span>in</span>
-                            <a class="category-link" href="#">tranquilpeak</a>
-                            ,
-                            <a class="category-link" href="#">features</a>
-                        </div>
-                        <div class="excerpt">
-                            <p>测试是完善的研发体系中不可或缺的一环。前端同样需要测试，你的css改动可能导致页面错位、js改动可能导致功能不正常。由于前端偏向GUI软件的特殊性，尽管测试领域工具层出不穷，在前端的自动化测试上面却实施并不广泛</p>
-                        </div>
-                        <p class="readmore">
-                            <a href="#" class="more-link">查看更多&gt;&gt;</a>
-                        </p>
-                    </section>
                 </article>
-
-                <article class="zblog-post-item">
-                    <a href="#" class="zblog-post-item-thumb">
-                        <img src="/static/img/demo/city-02.jpg"/>
-                    </a>
-                    <section class="zblog-post-item-detail">
-                        <h1 class="title">
-                            <a href="#" class="title-link">前端自动化测试探索</a>
-                        </h1>
-                        <div class="meta">
-                            <time datetime="2015-05-28T22:30:05+02:00">May 28, 2015</time>
-                            <span>in</span>
-                            <a class="category-link" href="#">tranquilpeak</a>
-                            ,
-                            <a class="category-link" href="#">features</a>
-                        </div>
-                        <div class="excerpt">
-                            <p>最近出现的 React Native 再次让跨平台移动端开发这个话题火起来了，曾经大家以为在手机上可以像桌面那样通过 Web 技术来实现跨平台开发，却大多因为性能或功能问题而放弃，不得不针对不同平台开发多个版本。</p>
-                        </div>
-                        <p class="readmore">
-                            <a href="#" class="more-link">查看更多&gt;&gt;</a>
-                        </p>
-                    </section>
-                </article>
-
-                <article class="zblog-post-item">
-                    <a href="#" class="zblog-post-item-thumb">
-                        <img src="/static/img/demo/city-03.jpg"/>
-                    </a>
-                    <section class="zblog-post-item-detail">
-                        <h1 class="title">
-                            <a href="#" class="title-link">关于请求被挂起页面加载缓慢问题的追查</a>
-                        </h1>
-                        <div class="meta">
-                            <time datetime="2015-05-28T22:30:05+02:00">May 28, 2015</time>
-                            <span>in</span>
-                            <a class="category-link" href="#">tranquilpeak</a>
-                            ,
-                            <a class="category-link" href="#">features</a>
-                        </div>
-                        <div class="excerpt">
-                            <p>由「钢的琴」网友脑洞大开延伸出了吉的他二的胡琵的琶，以及后来许嵩的「苏格拉没有底」，是否可以再拓展一下，得到哥本不爱吃哈根，哈根爱达斯等剧情乱入的关系。</p>
-                        </div>
-                        <p class="readmore">
-                            <a href="#" class="more-link">查看更多&gt;&gt;</a>
-                        </p>
-                    </section>
-                </article>
-                <article class="zblog-post-item">
-                    <a href="#" class="zblog-post-item-thumb">
-                        <img src="/static/img/demo/city-01.jpg"/>
-                    </a>
-                    <section class="zblog-post-item-detail">
-                        <h1 class="title">
-                            <a href="#" class="title-link">如何用 fis3 来开发 React?</a>
-                        </h1>
-                        <div class="meta">
-                            <time datetime="2015-05-28T22:30:05+02:00">May 28, 2015</time>
-                            <span>in</span>
-                            <a class="category-link" href="#">tranquilpeak</a>
-                            ,
-                            <a class="category-link" href="#">features</a>
-                        </div>
-                        <div class="excerpt">
-                            <p>测试是完善的研发体系中不可或缺的一环。前端同样需要测试，你的css改动可能导致页面错位、js改动可能导致功能不正常。由于前端偏向GUI软件的特殊性，尽管测试领域工具层出不穷，在前端的自动化测试上面却实施并不广泛</p>
-                        </div>
-                        <p class="readmore">
-                            <a href="#" class="more-link">查看更多&gt;&gt;</a>
-                        </p>
-                    </section>
-                </article>
-
-                <article class="zblog-post-item">
-                    <a href="#" class="zblog-post-item-thumb">
-                        <img src="/static/img/demo/city-02.jpg"/>
-                    </a>
-                    <section class="zblog-post-item-detail">
-                        <h1 class="title">
-                            <a href="#" class="title-link">前端自动化测试探索</a>
-                        </h1>
-                        <div class="meta">
-                            <time datetime="2015-05-28T22:30:05+02:00">May 28, 2015</time>
-                            <span>in</span>
-                            <a class="category-link" href="#">tranquilpeak</a>
-                            ,
-                            <a class="category-link" href="#">features</a>
-                        </div>
-                        <div class="excerpt">
-                            <p>最近出现的 React Native 再次让跨平台移动端开发这个话题火起来了，曾经大家以为在手机上可以像桌面那样通过 Web 技术来实现跨平台开发，却大多因为性能或功能问题而放弃，不得不针对不同平台开发多个版本。</p>
-                        </div>
-                        <p class="readmore">
-                            <a href="#" class="more-link">查看更多&gt;&gt;</a>
-                        </p>
-                    </section>
-                </article>
-
-                <article class="zblog-post-item">
-                    <a href="#" class="zblog-post-item-thumb">
-                        <img src="/static/img/demo/city-03.jpg"/>
-                    </a>
-                    <section class="zblog-post-item-detail">
-                        <h1 class="title">
-                            <a href="#" class="title-link">关于请求被挂起页面加载缓慢问题的追查</a>
-                        </h1>
-                        <div class="meta">
-                            <time datetime="2015-05-28T22:30:05+02:00">May 28, 2015</time>
-                            <span>in</span>
-                            <a class="category-link" href="#">tranquilpeak</a>
-                            ,
-                            <a class="category-link" href="#">features</a>
-                        </div>
-                        <div class="excerpt">
-                            <p>由「钢的琴」网友脑洞大开延伸出了吉的他二的胡琵的琶，以及后来许嵩的「苏格拉没有底」，是否可以再拓展一下，得到哥本不爱吃哈根，哈根爱达斯等剧情乱入的关系。</p>
-                        </div>
-                        <p class="readmore">
-                            <a href="#" class="more-link">查看更多&gt;&gt;</a>
-                        </p>
-                    </section>
-                </article>
-            </section>
-        </div>
-        <!-- Main E -->
+            <% }) %>
+        </section>
     </div>
-
-    <!-- Footer S -->
-    <footer class="zblog-footer">
-        <span class="copyrights">Copyrights © 2016 zuojj. All Rights Reserved.</span>
-    </footer>
-    <!-- Footer E -->
+    <%- include("sidebar") %>
 </div>
-
 <%- include("foot") %>

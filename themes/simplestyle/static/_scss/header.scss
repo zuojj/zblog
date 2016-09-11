@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-11 11:30:27
+ * @version $Id$
+ */
+
+@import "./helper/_mixin";
+
+
+.simple-header {
+    width: 1200px;
+    margin: 10px auto;
+    
+    @extend %clearfix;
+
+    &-logo {
+        float: left;
+        margin-top: 5px;
+        margin-right: 50px;
+        width: 188px;
+        height: 50px;
+        >img {
+            width: 100%;
+        }
+    }
+
+    &-nav {
+        float: left;
+
+        &-list {
+            @extend %clearfix;
+            line-height: 58px;
+        }
+
+        &-item {
+            float: left;
+            border-bottom: 1px solid #fff;
+            > a {
+                display: block;
+                padding: 0 18px;
+                text-align: center;
+                color: #5a5a5a;
+            }
+            &.active {
+                border-bottom-color: orange;
+            }
+
+            &:hover {
+                border-bottom-color: #ccc;
+            }
+        }
+    }
+}
