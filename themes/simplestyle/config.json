@@ -1,24 +1,46 @@
 {
-    "title": "zblog: a static blog",
-    "keywords": "zblog,blog",
-    "description": "zblog,blog",
-    "port": 8080,
-    "links": [
-        {
-            "title": "搜狗搜索",
-            "url": "https://m.sogou.com"
-        }, {
-            "title": "搜狗音乐",
-            "url": "https://m.sogou.com"
-        }, {
-            "title": "搜狗小说",
-            "url": "https://m.sogou.com"
-        }, {
-            "title": "搜狗图片",
-            "url": "https://m.sogou.com"
-        }, {
-            "title": "搜狗地图",
-            "url": "https://m.sogou.com"
-        }
-    ]
+    "server": {
+        "port": 8080
+    },
+    "site": {
+        "name": "WEBX",
+        "url": "http://xxx.com",
+        "description": "WEBX_搜索搜索WEB研发部",
+        "keywords": "WEBX, web, sogou搜索"
+    },
+    "navbar": [{
+        "title": "Home",
+        "url": "/"
+    }, {
+        "title": "Archives",
+        "url": "/Archives"
+    }, {
+        "title": "Categrogies",
+        "url": "/Categrogies"
+    }, {
+        "title": "Archives",
+        "url": "/Archives"
+    }, {
+        "title": "Tags",
+        "url": "/tags"
+    }, {
+        "title": "About",
+        "url": "/about"
+    }],
+    "links": [{
+        "title": "搜狗搜索",
+        "url": "https://m.sogou.com"
+    }, {
+        "title": "搜狗音乐",
+        "url": "https://m.sogou.com"
+    }, {
+        "title": "搜狗小说",
+        "url": "https://m.sogou.com"
+    }, {
+        "title": "搜狗图片",
+        "url": "https://m.sogou.com"
+    }, {
+        "title": "搜狗地图",
+        "url": "https://m.sogou.com"
+    }]
 }

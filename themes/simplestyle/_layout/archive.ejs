@@ -1,4 +1,8 @@
-<%- include("head") %>
+<%
+    page.active = 1;
+%>
+
+<%- include("head", {page: page}) %>
 <div class="simple-body">
     <div class="simple-body-main">
         <article class="simple-article">

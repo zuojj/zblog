@@ -1,18 +1,12 @@
-<%
-var page = {
-    title: '首页'
-}
-%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title><%= page.title %> - WEBX</title>
-<meta name="description" content="<%= page.title %>_WEBX_搜狗搜索WEB研发部">
-<meta name="keywords" content="<%= page.title %>,搜狗搜索WEB研发部,搜狗搜索,搜狗前端">
+<title><%= page && page.title %> - <%= config.site.name %></title>
+<meta name="description" content="<%= page && page.title %>_<%= config.site.description %>">
+<meta name="keywords" content="<%= page && page.title %>,<%= config.site.keywords %>">
 <link rel="stylesheet" href="/static/css/common.css">
 <script src="/static/js/prism.js"></script>
 <script src="/static/js/vue-2.0.0.js"></script>

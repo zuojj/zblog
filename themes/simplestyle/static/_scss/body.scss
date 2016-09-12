@@ -8,9 +8,12 @@
 
 @import './helper/_mixin';
 
+body {
+    padding: 100px 0 80px;
+}
 .simple-body {
     width: 1200px;
-    margin: 30px auto 80px;
+    margin: 20px auto;
 
     @extend %clearfix;
 

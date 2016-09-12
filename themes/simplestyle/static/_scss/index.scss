@@ -13,6 +13,7 @@
 
 .simple-post-list {
     margin-left: -24px;
+    @extend %clearfix;
 }
 .simple-post-item {
     float: left;
