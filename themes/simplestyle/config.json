@@ -12,15 +12,9 @@
         "title": "Home",
         "url": "/"
     }, {
-        "title": "Archives",
-        "url": "/Archives"
-    }, {
         "title": "Categrogies",
         "url": "/Categrogies"
-    }, {
-        "title": "Archives",
-        "url": "/Archives"
-    }, {
+    },{
         "title": "Tags",
         "url": "/tags"
     }, {
