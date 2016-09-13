@@ -1,25 +1,38 @@
 <%
-    var page = {
-        title: 'Archives',
-        active: 1
-    }
+    var page = page || {};
+    page.title = 'Archives';
+    page.active = 2;
 %>
 
 <%- include("head", {page: page}) %>
 <div class="simple-body">
     <div class="simple-body-main">
         <article class="simple-article">
-            <div class="simple-article-info">
-                <h1 class="title"><%= page.title %></h1>
-                <div class="meta">
-                    <span><%= page.author %></span>
-                    <span>发布于</span>
-                    <time><%= page.date %></time>
-                </div>
-            </div>
-            <div class="simple-article-content">
-                <%- page.body %>
-            </div>
+            <dl>
+            <% for(let key in archives) { 
+                if(archives.hasOwnProperty(key)) {
+                    let month = archives[key];
+            %>
+                    <h3><time><%=key%></time></h3>
+            <%
+                    for(let k in month) {
+                        if(month.hasOwnProperty(k)) {
+            %>
+                            <dt><%=k%></dt>
+            <%
+                            let pages = month[k];
+                            pages.forEach((page, index) => {
+            %>
+                                <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
+            <%
+                            })
+                        }
+                    }
+
+                }
+            }
+            %>
+            </dl>
         </article>
     </div>
     <%- include("sidebar") %>

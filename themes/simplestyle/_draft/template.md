@@ -2,7 +2,9 @@
 title: React 使用方法
 author: Benjamin
 date: 2016-09-11 11:18:29
-imgsrc: city-01.jpg
+picName: city-01.jpg
+categories: React, Javascript, FE
+tags: React,Web
 ---
 # Hello Zblog
 ## Hello Zblog

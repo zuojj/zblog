@@ -1,24 +1,21 @@
 <%
-    var page = {
-        title: 'Archives',
-        active: 3
-    }
+    var page = page || {};
+    page.title = 'Tags';
+    page.active = 2;
 %>
-
 <%- include("head", {page: page}) %>
 <div class="simple-body">
     <div class="simple-body-main">
         <article class="simple-article">
-            <div class="simple-article-info">
-                <h1 class="title"><%= page.title %></h1>
-                <div class="meta">
-                    <span><%= page.author %></span>
-                    <span>发布于</span>
-                    <time><%= page.date %></time>
-                </div>
-            </div>
-            <div class="simple-article-content">
-                <%- page.body %>
+            <div class="simple-category">
+                <dl>
+                    <% for(var key in tags) { if(tags.hasOwnProperty(key)) { let items = tags[key]; %>    
+                        <dt><%=key %></dt>
+                        <% items.forEach((page, index) => { %>
+                            <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
+                        <% }); %>
+                    <% }} %>
+                </dl>
             </div>
         </article>
     </div>
