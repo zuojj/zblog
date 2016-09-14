@@ -8,31 +8,37 @@
 <div class="simple-body">
     <div class="simple-body-main">
         <article class="simple-article">
-            <dl>
-            <% for(let key in archives) { 
-                if(archives.hasOwnProperty(key)) {
-                    let month = archives[key];
-            %>
-                    <h3><time><%=key%></time></h3>
-            <%
-                    for(let k in month) {
-                        if(month.hasOwnProperty(k)) {
-            %>
-                            <dt><%=k%></dt>
-            <%
-                            let pages = month[k];
-                            pages.forEach((page, index) => {
-            %>
-                                <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
-            <%
-                            })
+            <form id="form" class="simple-form">
+                <input type="search" id="search" name="serach" placeholder="Search Archive(YYYY/MM/DD)">
+            </form>
+            <div class="simple-archives">
+                <% for(let year in archives) { 
+                    if(archives.hasOwnProperty(year)) {
+                        let months = archives[year];
+                %>
+                <dl class="simple-archives-dlist">
+                    <div class="year"><h3><%=year%></h3></div>
+                <%
+                        for(let month in months) {
+                            if(months.hasOwnProperty(month)) {
+                %>
+                    <dt class="month"><%=month%></dt>
+                <%
+                                let pages = months[month];
+                                pages.forEach((page, index) => {
+                %>
+                    <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
+                <%
+                                })
+                            }
                         }
+                %>
+                </dl>
+                <%
                     }
-
                 }
-            }
-            %>
-            </dl>
+                %>
+            </div>
         </article>
     </div>
     <%- include("sidebar") %>
