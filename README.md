@@ -13,10 +13,10 @@ zblog -h
 $ zblog init newblog
 $ cd newblog
 
-// preview blog
+// preview blog, publish to www folder
 $ zblog server
 
-// pubish blog
+// pubish blog, default: output_prod
 $ zblog build
 ```
 
