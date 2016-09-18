@@ -7,9 +7,9 @@
 <div class="simple-body">
     <div class="simple-body-main">
         <article class="simple-article">
-            <form id="form" class="simple-form">
-                <input type="search" id="search" name="serach" placeholder="Search Category">
-            </form>
+<!--             <form id="form" class="simple-form">
+    <input type="search" id="search" name="serach" placeholder="Search Category">
+</form> -->
             <div class="simple-category">
                 <div class="simple-category-dir">
                     <h3 class="title">分类目录</h3>
@@ -21,7 +21,7 @@
                 </div>
                 
                 <% for(var key in categories) { if(categories.hasOwnProperty(key)) { let items = categories[key];%>
-                <dl class="simple-category-dlist" id="cate-<%=key%>">    
+                <dl class="simple-category-dlist" id="cate-<%=key%>" data-category="<%=key%>">    
                     <dt><%=key %> (<%=items.length%>)</dt>
                     <% items.forEach((page, index) => { %>
                         <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
