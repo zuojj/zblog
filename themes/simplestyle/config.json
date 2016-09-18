@@ -1,4 +1,17 @@
 {
+    "compile": {
+        "css": {
+            "useHash": true,
+            "useUglify": true
+        },
+        "js": {
+            "useHash": true,
+            "useUglify": true
+        },
+        "img": {
+            "useHash": true
+        }
+    },
     "server": {
         "port": 8080
     },

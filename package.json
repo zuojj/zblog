@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/zuojj/zblog#readme",
   "dependencies": {
+    "autoprefixer": "^6.4.1",
     "commander": "^2.9.0",
+    "cssnano": "^3.7.4",
     "ejs": "^2.5.1",
     "express": "^4.14.0",
     "fs-extra": "^0.30.0",
@@ -33,6 +35,7 @@
     "moment": "^2.14.1",
     "node-sass": "^3.9.3",
     "open": "0.0.5",
+    "postcss": "^5.2.0",
     "rd": "0.0.2",
     "serve-static": "^1.11.1"
   }
