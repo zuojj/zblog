@@ -17,7 +17,6 @@ $ cd newblog
 
 // publish blog
 $ zblog build
-```
 
 // preview blog
 $ zblog server
