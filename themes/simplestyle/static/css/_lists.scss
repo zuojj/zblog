@@ -1,10 +1,12 @@
 @charset "UTF-8";
 /**
- * 
+ *
  * @authors Benjamin (zuojj.com@gmail.com)
  * @date    2016-09-14 09:24:21
  * @version $Id$
  */
+
+@import "helper/_mixin";
 
 .simple-form {
     margin-bottom: 20px;
@@ -40,7 +42,7 @@
             }
 
         }
-        
+
         .taglist {
             a {
                 display: inline-block;
@@ -65,7 +67,8 @@
             padding: 5px 0;
             text-indent: 2em;
             &:before {
-                content: '▶';
+                @extend %iconfont;
+                content: '\e600';
                 position: absolute;
                 font-size: 20px;
                 left: -20px;
@@ -100,7 +103,8 @@
             padding: 5px 0;
             text-indent: 4em;
             &:before {
-                content: '▶';
+                @extend %iconfont;
+                content: '\e600';
                 position: absolute;
                 font-size: 20px;
                 left: -20px;

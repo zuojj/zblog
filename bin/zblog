@@ -11,7 +11,8 @@ const util      = require('../lib/util');
 
 
 const info = util.readJSON(path.dirname(__dirname) + '/package.json');
-const version = info.version
+const version = info.version;
+
 commander.version(version);
 
 // help
