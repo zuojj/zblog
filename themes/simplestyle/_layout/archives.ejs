@@ -8,27 +8,24 @@
 <div class="simple-body">
     <div class="simple-body-main" id="main">
         <article class="simple-article">
-<!--             <form id="form" class="simple-form">
-    <input type="search" id="search" name="serach" placeholder="Search Archive(YYYY/MM/DD)" @input="input">
-</form> -->
             <div class="simple-archives">
                 <% for(let year in archives) { 
                     if(archives.hasOwnProperty(year)) {
                         let months = archives[year];
                 %>
                 <dl class="simple-archives-dlist">
-                    <div class="year" data-date="<%=year%>"><h3><%=year%></h3></div>
+                    <div class="year"><h3><%=year%></h3></div>
                 <%
                         for(let month in months) {
                             if(months.hasOwnProperty(month)) {
                                 let weeks = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
                 %>
-                    <dt class="month" data-date="<%=year%><%=month%>"><%=weeks[parseInt(month, 10) - 1]%></dt>
+                    <dt class="month"><%=weeks[parseInt(month, 10) - 1]%></dt>
                 <%
                                 let pages = months[month];
                                 pages.forEach((page, index) => {
                 %>
-                    <dd data-date="<%=year%><%=month%><%=page.day%>"><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
+                    <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
                 <%
                                 })
                             }

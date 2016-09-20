@@ -1,6 +1,6 @@
 {
   "name": "zblog",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "It is a static blog stystem based on markdown and nodejs",
   "main": "index.js",
   "bin": {
