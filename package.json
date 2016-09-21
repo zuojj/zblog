@@ -1,6 +1,6 @@
 {
   "name": "zblog",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "It is a static blog stystem based on markdown and nodejs",
   "main": "index.js",
   "bin": {
@@ -34,7 +34,6 @@
     "md5": "^2.2.1",
     "moment": "^2.14.1",
     "node-sass": "^3.9.3",
-    "open": "0.0.5",
     "postcss": "^5.2.0",
     "rd": "0.0.2",
     "serve-static": "^1.11.1",
