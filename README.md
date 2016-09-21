@@ -15,20 +15,23 @@ $ zblog init newblog
 // change to newblog
 $ cd newblog
 
+/* 以下命令需要在newblog目录下操作 */
+
 // publish blog
 $ zblog build
 
 // preview blog
-$ zblog server
+$ zblog server start
 
-// publish blog to specify dir
+// stop server
+$ zblog server stop
+
+// open server directory
+$ zblog server open
+
+// publish blog to specify directory
 $ zblog build -o ./output
 ```
 
-## 待开发
-* 编译缓存
-* 资源定位
-* 文件变动自动刷新
-
-## Stack
+# Stack
 nodejs + koa2 + markdown + ejs + sass + es6 + webpack
