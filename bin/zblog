@@ -8,8 +8,6 @@ const build     = require('../lib/build');
 const init      = require('../lib/init');
 const newpost   = require('../lib/newpost');
 const util      = require('../lib/util');
-
-
 const info = util.readJSON(path.dirname(__dirname) + '/package.json');
 const version = info.version;
 
