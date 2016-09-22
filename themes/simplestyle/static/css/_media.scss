@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * 
+ *
  * @authors Benjamin (zuojj.com@gmail.com)
  * @date    2016-09-12 12:02:55
  * @version $Id$
@@ -71,19 +71,35 @@
             &-nav {
                 float: none;
                 display: none;
+                position: absolute;
+                top: 47px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(200,200,200, .9);
 
                 &-list {
-                    line-height: 30px;
+                    line-height: 36px;
                 }
 
                 &-item {
                     float: none;
+                    margin: 0;
+                    border-bottom-color: #efefef;
+                    > a {
+                        &:after {
+                            height: 1px;
+                            bottom: -1px;
+                        }
+                    }
                 }
             }
 
             &-dir {
                 display: block;
-                margin-top: -1px;
+                margin-top: 1px;
+                &:before {
+                    pointer-events: none;
+                }
             }
         }
 
@@ -101,11 +117,15 @@
                 display: none;
             }
         }
-        
+
 
         &-post-list {
             padding: 20px;
             box-sizing: border-box;
+        }
+
+        &-article {
+            box-shadow: none;
         }
     }
 }

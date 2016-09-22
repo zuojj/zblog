@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * 
+ *
  * @authors Benjamin (zuojj.com@gmail.com)
  * @date    2016-09-11 11:30:27
  * @version $Id$
@@ -20,17 +20,17 @@
     &-inner {
         width: 1160px;
         margin: 0 auto;
-        padding: 10px 20px;
+        padding: 10px 0;
     }
 
-    
+
     @extend %clearfix;
 
     &-logo {
         float: left;
-        margin-right: 50px;
         width: 188px;
         height: 50px;
+        margin-left: 20px;
         >img {
             width: 100%;
         }
@@ -83,6 +83,7 @@
     &-dir {
         display: none;
         float: right;
+        padding: 0 20px;
         color: #f84818;
     }
 }
