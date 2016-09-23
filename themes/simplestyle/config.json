@@ -14,8 +14,8 @@
     },
     "server": {
         "port": 8080,
-	"hostname": "127.0.0.1",
-	"browser": "chrome"
+        "hostname": "127.0.0.1",
+        "browser": "chrome"
     },
     "site": {
         "name": "WEBX",

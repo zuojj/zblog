@@ -36,7 +36,7 @@ commander
 
 // build
 commander
-    .command('build')
+    .command('build [dir]')
     .description('生成静态HTML')
     .option('-o, --output <dir>', 'publish 目录')
     .action(build);
