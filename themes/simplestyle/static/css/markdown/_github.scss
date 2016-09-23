@@ -505,4 +505,18 @@
     hr {
         border-bottom-color: #eee;
     }
+
+    pre:not([class*='language-']) {
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f7f7f7;
+        border-radius: 3px;
+        > code {
+            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 100%;
+            color: #333;
+        }
+    }
 }
