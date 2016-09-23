@@ -31,7 +31,7 @@ $ zblog server open
 
 // publish blog to specify directory
 $ zblog build -o ./output
-```
 
-# Stack
-nodejs + koa2 + markdown + ejs + sass + es6 + webpack
+// create a new article
+$ zblog new filename
+```
