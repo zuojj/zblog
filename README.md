@@ -35,3 +35,12 @@ $ zblog build -o ./output
 // create a new article
 $ zblog new filename
 ```
+
+## 待实现
+* 实现资源定位
+* 实现编译缓存
+* 实现基本代码检测
+* 实现hash戳
+* 完善默认配置及合并处理
+* 完善commander命令行
+* 完善日志处理
