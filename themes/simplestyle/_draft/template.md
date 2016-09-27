@@ -558,14 +558,14 @@ Title is optional.
 
 Code:
 
-    ![Alt text](/path/to/img.jpg)
+    ![Alt text](http://logo.www.sogou.com/images/logo2014/chanpindaquan.png)
 
-    ![Alt text](/path/to/img.jpg "Optional title")
+    ![Alt text](http://logo.www.sogou.com/images/logo2014/chanpindaquan.png "Optional title")
 Preview:
 ***
-![Alt text](/path/to/img.jpg)
+![Alt text](http://logo.www.sogou.com/images/logo2014/chanpindaquan.png)
 
-![Alt text](/path/to/img.jpg "Optional title")
+![Alt text](http://logo.www.sogou.com/images/logo2014/chanpindaquan.png "Optional title")
 ***
 That is:
 
@@ -578,7 +578,7 @@ Reference-style image syntax looks like this: `![Alt text][id]`
 
 Code:
 
-    [img id]: url/to/image  "Optional title attribute"
+    [img id]: http://logo.www.sogou.com/images/logo2014/chanpindaquan.png  "Optional title attribute"
     ![Alt text][img id]
 Preview:
 ***
