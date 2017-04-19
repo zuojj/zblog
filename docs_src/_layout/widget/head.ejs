@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title><%= page && page.title %> - <%= config.site.name %></title>
+<meta name="description" content="<%= page && page.title %>_<%= config.site.description %>">
+<meta name="keywords" content="<%= page && page.title %>,<%= config.site.keywords %>">
+<link rel="stylesheet" href="/static/css/common.css">
+<script src="/static/js/vue-2.0.0.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browsersupport">您使用的浏览器版本<strong>已过时</strong>，请<a href="http://browsehappy.com/">使用现代浏览器</a></p>
+<![endif]-->
+<%- include("header") %>
+
+

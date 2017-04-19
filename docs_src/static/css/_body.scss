@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-11 12:40:38
+ * @version $Id$
+ */
+
+@import './helper/_mixin';
+
+body {
+    padding: 100px 0 80px;
+}
+.simple-body {
+    width: 1200px;
+    margin: 20px auto;
+
+    @extend %clearfix;
+
+    &-main {
+        width: 900px;
+        float: left;
+    }
+
+    &-sidebar {
+        padding: 0 20px;
+        width: 240px;
+        float: right;
+    }
+}

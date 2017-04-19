@@ -1,46 +1,71 @@
 # zblog
-It is a tatic blog system based on markdown and nodejs
+It is a static blog system based on markdown and nodejs
 
-# Operate
-```bash
-// install
+## Installation
+
+``` bash
 $ npm install -g zblog
-
-// help
-zblog -h
-
-// init a blog
-$ zblog init newblog
-
-// change to newblog
-$ cd newblog
-
-/* 以下命令需要在newblog目录下操作 */
-
-// publish blog
-$ zblog build
-
-// preview blog
-$ zblog server start
-
-// stop server
-$ zblog server stop
-
-// open server directory
-$ zblog server open
-
-// publish blog to specify directory
-$ zblog build -o ./output
-
-// create a new article
-$ zblog new filename
 ```
 
-## 待实现
-* 实现资源定位
-* 实现编译缓存
-* 实现基本代码检测
-* 实现hash戳
-* 完善默认配置及合并处理
-* 完善commander命令行
-* 完善日志处理
+## Usage
+
+``` bash
+$ zblog -h
+```
+
+Usage: zblog [options] [command]
+
+Commands:
+
+help                         显示使用帮助
+init [options] [dir]         创建一个新的博客
+server [dir]                 实时预览
+build [options] [dir]        生成静态HTML
+new [options] [articleName]  新建一篇文章
+
+Options:
+
+-h, --help     output usage information
+-V, --version  output the version number
+
+
+> Init a blog
+``` bash
+$ zblog init <blog-folder-name>
+```
+Example:
+
+``` bash
+$ zblog init myFirstBlog
+```
+
+> Build a blog
+``` bash
+$ cd myFirstBlog
+$ zblog build 
+```
+
+> Local preview
+``` bash
+$ cd myFirstBlog
+$ zblog server start
+$ zblog server stop
+```
+
+> Open build folder
+``` bash
+$ cd myFirstBlog
+$ zblog server open
+```
+
+> Production Release
+``` bash
+$ cd myFirstBlog
+$ zblog build -o ./output-prod
+```
+
+> Create a new article
+``` bash
+$ cd myFirstBlog
+$ zlog new <file-name>
+```

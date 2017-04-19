@@ -18,10 +18,10 @@
         "browser": "chrome"
     },
     "site": {
-        "name": "ZBlog",
-        "url": "https://zuojj.github.io/zblog",
-        "description": "静态博客生成工具",
-        "keywords": "Zblog, blog, nodejs, markdown"
+        "name": "WEBX",
+        "url": "http://xxx.com",
+        "description": "WEBX_搜索搜索WEB研发部",
+        "keywords": "WEBX, web, sogou搜索"
     },
     "navbar": [{
         "title": "Home",
@@ -40,19 +40,19 @@
         "url": "/about"
     }],
     "links": [{
-        "title": "Nodejs",
-        "url": "http://www.nodejs.org/"
-    }, {
-        "title": "Markdown",
-        "url": "http://www.markdowntutorial.com/"
-    }, {
-        "title": "煦涵",
-        "url": "http://www.zuojj.com"
-    }, {
-        "title": "ZBlog",
+        "title": "搜狗搜索",
         "url": "https://m.sogou.com"
     }, {
-        "title": "搜狗",
+        "title": "搜狗音乐",
+        "url": "https://m.sogou.com"
+    }, {
+        "title": "搜狗小说",
+        "url": "https://m.sogou.com"
+    }, {
+        "title": "搜狗图片",
+        "url": "https://m.sogou.com"
+    }, {
+        "title": "搜狗地图",
         "url": "https://m.sogou.com"
     }]
 }

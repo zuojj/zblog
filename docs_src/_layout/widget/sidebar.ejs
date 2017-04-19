@@ -1,0 +1,13 @@
+<div class="simple-body-sidebar">
+    <div class="simple-sidebar-qrcode">
+        <img src="/static/img/qrcode.png" />
+    </div>
+    <dl class="simple-sidebar-dlist">
+        <dt>友情链接</dt>
+        <% config && config.links && config.links.forEach((item, index) => { %>
+            <dd>
+                <a href="<%= item.url %>" title="<%= item.title %>"><%= item.title %></a>
+            </dd>
+        <% }); %>
+    </dl>
+</div>

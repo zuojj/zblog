@@ -1,0 +1,15 @@
+<%
+    var page = page || {};
+    page.title = 'About';
+    page.active = 4;
+%>
+<%- include("head", {page: page}) %>
+<div class="simple-body">
+    <div class="simple-body-main">
+        <article class="simple-article">
+            关于我们
+        </article>
+    </div>
+    <%- include("sidebar") %>
+</div>
+<%- include("foot") %>

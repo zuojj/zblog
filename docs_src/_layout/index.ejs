@@ -1,0 +1,32 @@
+<%
+    var page = page || {};
+    page.title = '首页';
+    page.active = 0;
+%>
+<%- include("head", {page: page}) %>
+<%- include("banner", {page: page}) %>
+
+<div class="simple-body">
+    <div class="simple-body-main">
+        <section class="simple-post-list">
+            <% pages && pages.forEach(function(page, index) { %>
+                <article class="simple-post-item">
+                    <a href="<%= page.url %>" title="<%= page.title %>">
+                        <div class="simple-post-item-thumb">
+                            <img src="/static/img/thumb/<%= page.thumb %>" alt="<%= page.title %>" />
+                        </div>
+                        <div class="simple-post-item-info">
+                            <h3 class="title"><%= page.title %></h3>
+                            <div class="meta">
+                                <span><%= page.author %> 发布于</span>
+                                <time><%= page.date %></time>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            <% }) %>
+        </section>
+    </div>
+    <%- include("sidebar") %>
+</div>
+<%- include("foot") %>

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-11 11:30:27
+ * @version $Id$
+ */
+
+@import "./helper/_mixin";
+
+.simple-header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #efefef;
+    background-color: #fff;
+
+    &-inner {
+        width: 1160px;
+        margin: 0 auto;
+        padding-top: 10px;
+        height: 58px;
+    }
+
+
+    @extend %clearfix;
+
+    &-logo {
+        float: left;
+        width: 188px;
+        height: 58px;
+        margin-right: 50px;
+        >img {
+            width: 100%;
+        }
+    }
+
+    &-nav {
+        float: left;
+
+        &-list {
+            @extend %clearfix;
+            line-height: 58px;
+        }
+
+        &-item {
+            float: left;
+            margin: 0 5px;
+            border-bottom: 1px solid #fff;
+            > a {
+                position: relative;
+                display: block;
+                padding: 0 18px;
+                text-align: center;
+                color: #5a5a5a;
+
+                &:after {
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -2px;
+                    transform: translateX(-50%);
+                    transition: width 0.3s linear;
+                }
+            }
+
+            &:hover,
+            &.active {
+                > a {
+                    color: #333;
+                    &:after {
+                        width: 100%;
+                        background-color: #f84818;
+                    }
+                }
+            }
+        }
+    }
+
+    &-dir {
+        display: none;
+        float: right;
+        padding: 0 20px;
+        color: #f84818;
+    }
+}

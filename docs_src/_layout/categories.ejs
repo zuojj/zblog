@@ -1,0 +1,33 @@
+<%
+    var page = page || {};
+    page.title = 'Categories';
+    page.active = 2;
+%>
+<%- include("head", {page: page}) %>
+<div class="simple-body">
+    <div class="simple-body-main">
+        <article class="simple-article">
+            <div class="simple-category">
+                <div class="simple-category-dir">
+                    <h3 class="title">分类目录</h3>
+                    <ul class="ulist">
+                        <% for(var key in categories) { if(categories.hasOwnProperty(key)) {%>
+                        <li><a href="#cate-<%=key%>"><%=key%></a></li>
+                        <% } } %>
+                    </ul>
+                </div>
+                
+                <% for(var key in categories) { if(categories.hasOwnProperty(key)) { let items = categories[key];%>
+                <dl class="simple-category-dlist" id="cate-<%=key%>">    
+                    <dt><%=key %> (<%=items.length%>)</dt>
+                    <% items.forEach((page, index) => { %>
+                        <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
+                    <% }); %>
+                </dl>
+                <% }} %>
+            </div>
+        </article>
+    </div>
+    <%- include("sidebar") %>
+</div>
+<%- include("foot") %>

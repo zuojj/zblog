@@ -1,0 +1,113 @@
+@charset 'UTF-8';
+/**
+ *
+ * @authors Benjamin (cuew1987@gmail.com)
+ * @date    2016-02-25 16:20:20
+ * @version $Id$
+ */
+*,
+:after,
+:before {
+    -webkit-tap-highlight-color: transparent;
+}
+
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+legend,
+li,
+ol,
+p,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+li {
+    list-style: none;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+input:password {
+    ime-mode: disabled;
+}
+
+:focus {
+    outline: 0;
+}
+
+body,
+html {
+    min-height: 100%;
+    background-color: #fff;
+}
+
+body {
+/*     -webkit-user-select: none;
+            user-select: none; */
+}
+
+a,
+img {
+    -webkit-touch-callout: none;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Helvetica Neue',Helvetica,STHeiTi,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #333;
+}
+
+input,button, textarea, select {
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+a {
+    text-decoration: none;
+
+    color: #333;
+}

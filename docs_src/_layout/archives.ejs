@@ -1,0 +1,44 @@
+<%
+    var page = page || {};
+    page.title = 'Archives';
+    page.active = 1;
+%>
+
+<%- include("head", {page: page}) %>
+<div class="simple-body">
+    <div class="simple-body-main" id="main">
+        <article class="simple-article">
+            <div class="simple-archives">
+                <% for(let year in archives) { 
+                    if(archives.hasOwnProperty(year)) {
+                        let months = archives[year];
+                %>
+                <dl class="simple-archives-dlist">
+                    <div class="year"><h3><%=year%></h3></div>
+                <%
+                        for(let month in months) {
+                            if(months.hasOwnProperty(month)) {
+                                let weeks = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                %>
+                    <dt class="month"><%=weeks[parseInt(month, 10) - 1]%></dt>
+                <%
+                                let pages = months[month];
+                                pages.forEach((page, index) => {
+                %>
+                    <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
+                <%
+                                })
+                            }
+                        }
+                %>
+                </dl>
+                <%
+                    }
+                }
+                %>
+            </div>
+        </article>
+    </div>
+    <%- include("sidebar") %>
+</div>
+<%- include("foot") %>

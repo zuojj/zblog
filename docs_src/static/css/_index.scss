@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+/**
+ * 
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-07 18:06:35
+ * @version $Id$
+ */
+
+
+@import './helper/_mixin';
+
+
+
+.simple-post-list {
+    margin-left: -24px;
+    @extend %clearfix;
+}
+.simple-post-item {
+    float: left;
+    width: 280px;
+    margin: 0 0 40px 24px;
+    border: 2px solid #f8f8f8;
+    background-color: #fff;
+
+    &:hover {
+        border-color: orange;
+        .simple-post-item-info {
+            .title {
+                color: orange;
+            }
+        }
+    }
+
+    >a {
+        display: block;
+    }
+
+    &-thumb {
+        height: 150px;
+        overflow: hidden;
+        >img {
+            width: 100%;
+        }
+    }
+
+    &-info {
+        padding: 10px;
+        .title {
+            height: 24px;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            @extend %ellipsis;
+        }
+
+        .meta {
+            font-size: 10px;
+            color: #999;
+        }
+    }
+}

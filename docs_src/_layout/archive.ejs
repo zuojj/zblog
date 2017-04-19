@@ -1,0 +1,24 @@
+<%
+    var page = page || {};
+    page.active = 1;
+%>
+<%- include("head", {page: page}) %>
+<div class="simple-body">
+    <div class="simple-body-main">
+        <article class="simple-article">
+            <div class="simple-article-info">
+                <h1 class="title"><%= page.title %></h1>
+                <div class="meta">
+                    <span><%= page.author %></span>
+                    <span>发布于</span>
+                    <time><%= page.date %></time>
+                </div>
+            </div>
+            <div class="simple-article-content markdown-body">
+                <%- page.body %>
+            </div>
+        </article>
+    </div>
+    <%- include("sidebar") %>
+</div>
+<%- include("foot") %>

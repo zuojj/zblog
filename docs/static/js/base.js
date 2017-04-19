@@ -1,0 +1,1 @@
+!function(e,n){new Vue({el:"#app",methods:{clickIconDir:function(e){var n=document.querySelector(".simple-header-nav");n.style.display="none"==n.style.display?"block":"none"}}})}(window);

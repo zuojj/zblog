@@ -1,0 +1,17 @@
+<header class="simple-header" id="app">
+    <div class="simple-header-inner">
+        <a class="simple-header-logo" href="/" alt="<%= config.name %>">
+            <img src="/static/img/logo.png" alt="<%= config.name %>" />
+        </a>
+        <nav class="simple-header-nav">
+            <ul class="simple-header-nav-list">
+                <% config && config.navbar && config.navbar.forEach((item, index) => { var active = page.active === index ? 'active' : '' %>
+                    <li class="simple-header-nav-item <%=active%>">
+                        <a href="<%= item.url %>"><%= item.title %></a>
+                    </li>
+                <% }) %>
+            </ul>
+        </nav>
+        <i class="simple-header-dir iconfont icon-dir" @click="clickIconDir"></i>
+    </div>
+</header>

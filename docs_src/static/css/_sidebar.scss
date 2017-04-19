@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-11 12:38:23
+ * @version $Id$
+ */
+
+
+.simple-sidebar {
+    &-qrcode {
+        text-align: center;
+        margin-bottom: 20px;
+        img {
+            width: 200px;
+        }
+    }
+
+    &-dlist {
+        dt {
+            padding-left: 12px;
+            border-left: 3px solid orange;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        dd {
+            padding-left: 15px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}

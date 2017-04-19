@@ -1,0 +1,32 @@
+<%
+    var page = page || {};
+    page.title = 'Tags';
+    page.active = 3;
+%>
+<%- include("head", {page: page}) %>
+<div class="simple-body">
+    <div class="simple-body-main">
+        <article class="simple-article">
+            <div class="simple-tags">
+                <div class="simple-tags-dir">
+                    <h3 class="title">Tags目录</h3>
+                    <div class="taglist">
+                        <% for(var key in tags) { if(tags.hasOwnProperty(key)) {%>
+                        <a href="#tag-<%=key%>"><%=key%></a>
+                        <% } } %>
+                    </div>
+                </div>
+                <% for(var key in tags) { if(tags.hasOwnProperty(key)) { let items = tags[key]; %>
+                <dl class="simple-tags-dlist" id="tag-<%=key%>" data-tag="<%=key%>">
+                    <dt><%=key %></dt>
+                    <% items.forEach((page, index) => { %>
+                        <dd><a href="<%=page.url%>" title="<%=page.title%>"><%=page.title%></a></dd>
+                    <% }); %>
+                </dl>
+                <% }} %>
+            </div>
+        </article>
+    </div>
+    <%- include("sidebar") %>
+</div>
+<%- include("foot") %>

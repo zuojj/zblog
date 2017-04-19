@@ -2,14 +2,14 @@
 
 const commander = require('commander');
 const fs        = require('fs');
-const path        = require('path');
+const path      = require('path');
 const server    = require('../lib/server');
 const build     = require('../lib/build');
 const init      = require('../lib/init');
 const newpost   = require('../lib/newpost');
 const util      = require('../lib/util');
-const info = util.readJSON(path.dirname(__dirname) + '/package.json');
-const version = info.version;
+const info      = util.readJSON(path.dirname(__dirname) + '/package.json');
+const version   = info.version;
 
 commander.version(version);
 

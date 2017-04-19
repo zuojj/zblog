@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Benjamin (zuojj.com@gmail.com)
+ * @date    2016-09-12 12:02:55
+ * @version $Id$
+ */
+
+
+@media screen and (max-width: 320px) {
+    body {
+        width: 320px;
+        min-width: 320px;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple {
+        &-post {
+            &-list {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            &-item {
+                float: none;
+                width: 100%;
+                margin: 0 0 20px 0;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+    .simple {
+        &-post {
+            &-list {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            &-item {
+                width: 48%;
+                box-sizing: border-box;
+                margin: 0 1% 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        padding: 46px 0;
+    }
+    .simple {
+        &-header {
+            &-inner {
+                width: 100%;
+                height: 46px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            &-logo {
+                width: 94px;
+                height: 25px;
+                margin-left: 20px;
+            }
+
+            &-nav {
+                float: none;
+                display: none;
+                position: absolute;
+                top: 47px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(200,200,200, .9);
+
+                &-list {
+                    line-height: 36px;
+                }
+
+                &-item {
+                    float: none;
+                    margin: 0;
+                    border-bottom-color: #efefef;
+                    > a {
+                        &:after {
+                            height: 1px;
+                            bottom: -1px;
+                        }
+                    }
+                }
+            }
+
+            &-dir {
+                display: block;
+                margin-top: 1px;
+                &:before {
+                    pointer-events: none;
+                }
+            }
+        }
+
+        &-body {
+            width: 100%;
+            margin: 0 auto;
+
+            &-main {
+                width: 100%;
+                float: none;
+                box-shadow: none;
+            }
+
+            &-sidebar {
+                display: none;
+            }
+        }
+
+
+        &-post-list {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        &-article {
+            box-shadow: none;
+        }
+    }
+}
